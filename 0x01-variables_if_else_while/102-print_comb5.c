@@ -1,23 +1,40 @@
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- * main - program that prints numbers from 0 to 99.
+ * main - Entry Point
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
  * Return: 0
  */
 
 int main(void)
 {
-int c = 0;
-while (c <= 99)
-{
-putchar(c / 10 + '0');
-putchar(c % 10 + '0');
-if (c != 99)
-{
-putchar(','); 
-putchar(' ');
-}
-c++;
-}
-putchar('\n');
-return (0);
+	int firstDigit = 0, seconDigit;
+
+	while (firstDigit <= 99)
+	{
+		seconDigit = firstDigit;
+		while (seconDigit <= 99)
+		{
+			if (seconDigit != firstDigit)
+			{
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
+				putchar(' ');
+				putchar((seconDigit / 10) + 48);
+				putchar((seconDigit % 10) + 48);
+
+				if (firstDigit != 98 || seconDigit != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			++seconDigit;
+		}
+		++firstDigit;
+	}
+	putchar('\n');
+
+	return (0);
 }
