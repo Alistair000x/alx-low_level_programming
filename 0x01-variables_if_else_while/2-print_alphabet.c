@@ -5,17 +5,14 @@
  */
 int main(void)
 {
-	char c;
-	/* print lowercase alphabet */
-	for (c = 'a'; c <= 'z'; c++)
+	char c = 'a';
+	/* loop through lowercase alphabet */
+	while (c <= 'z')
 	{
 		putchar(c);
+		c++;
 	}
-	/* print uppercase alphabet */
-	for (c = 'A'; c <= 'Z'; c++)
-	{
-		putchar(c);
-	}
+
 	putchar('\n');
 	return (0);
 }
