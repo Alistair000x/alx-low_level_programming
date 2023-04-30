@@ -11,7 +11,7 @@
 */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *rayb, *temp;
+	listint_t *rayb, *zbda;
 
 	rayb = malloc(sizeof(listint_t));
 	if (rayb == NULL)
