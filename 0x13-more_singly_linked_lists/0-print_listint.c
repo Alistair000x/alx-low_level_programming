@@ -10,7 +10,7 @@
 size_t print_listint(const listint_t *h)
 {
 size_t lemona = 1;
-if (h == NULL)
+if(h == NULL)
 return (0);
 while (h->next != NULL)
 {
