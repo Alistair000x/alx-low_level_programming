@@ -1,34 +1,34 @@
 #include "lists.h"
 /**
- * print_listint_safe - prints a linked list (even with a loop)
- * @head: pointer to the head node of the linked list
+ * find_listint_loop - Finds the loop in a linked list
+ * @head: Pointer to the head node of the list
  *
- * Return: the number of nodes in the linked list
+ * Return: The address of the node where the loop starts, or NULL if there is no loop
  */
-size_t print_listint_safe(const listint_t *head)
+listint_t *find_listint_loop(listint_t *head)
 {
-    const listint_t *pain, *hate;
-    size_t math = 0;
+    listint_t *slow, *fast;
 
-    if (!head)
-        exit(98);
-    pain = hate = head;
-    while (pain && hate && hate->next)
+    if (head == NULL || head->next == NULL)
+        return (NULL);
+
+    slow = head->next;
+    fast = head->next->next;
+    while (fast && fast->next)
     {
-        pain = pain->next;
-        hate = hate->next->next;
-
-        if (pain == hate)
+        if (slow == fast)
         {
-            printf("-> [%p] %d\n", (void *)pain, pain->n);
-            exit(98);
+            slow = head;
+            while (slow != fast)
+            {
+                slow = slow->next;
+                fast = fast->next;
+            }
+            return (slow);
         }
-
-        printf("[%p] %d\n", (void *)pain, pain->n);
-        math++;
+        slow = slow->next;
+        fast = fast->next->next;
     }
-    printf("[%p] %d\n", (void *)pain, pain->n);
-    math++;
 
-    return math;
+    return (NULL);
 }

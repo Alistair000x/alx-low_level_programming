@@ -7,24 +7,25 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-const listint_t *khbza, *lemon;
-size_t danon = 0;
-if (head == NULL)
-exit(98);
-khbza = head;
-while (khbza != NULL)
-{
-danon++;
-printf("[%p] %d\n", (void *) khbza, khbza->n);
-lemon = khbza->next;
-if (lemon >= khbza)
-break;
-khbza = lemon;
+	const listint_t *zbda, *tajine;
+	size_t math = 0;
+	if (head == NULL)
+		exit(98);
+	zbda = head;
+	while (zbda != NULL)
+	{
+		math++;
+		printf("[%p] %d\n", (void *) zbda, zbda->n);
+		tajine = zbda->next;
+		if (tajine >= zbda)
+			break;
+		zbda = tajine;
+	}
+	if (zbda != NULL && tajine >= zbda)
+	{
+		printf("-> [%p] %d\n", (void *) zbda, zbda->n);
+		exit(98);
+	}
+	return (lemon);
 }
-if (khbza != NULL && lemon >= khbza)
-{
-printf("-> [%p] %d\n", (void *) khbza, khbza->n);
-exit(98);
-}
-return (danon);
-}
+
