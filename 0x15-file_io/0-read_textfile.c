@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * read_textfile - read and print
- * @filename
- * @letters
- * Retrun: 0 if the fail cannot be opened or read
+ * @filename: filename
+ * @letters: letters
+ *
+ * Retrun: if the file can not be opened or read, return 0
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
