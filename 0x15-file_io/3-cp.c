@@ -9,7 +9,7 @@
  * @filename: files
  * @files: files
  * @argv: arguments
- * Return: no return.
+ * Return: no returng
  */
 void a_file(int filename, int files, char *argv[])
 {
@@ -71,7 +71,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", files);
 		exit(100);
 	}
-	
 	return (0);
 }
-
