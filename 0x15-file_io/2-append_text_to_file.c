@@ -22,6 +22,6 @@ b = write(o, text_content, p);
 if (b == -1)
 return (-1);
 }
-close (o);
+close(o);
 return (1);
 }
