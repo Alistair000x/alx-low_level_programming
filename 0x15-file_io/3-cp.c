@@ -6,10 +6,10 @@
 
 /**
  * a_file - checks if files can be opened
- * @filename: file descriptor
- * @files: file descriptor
+ * @filename: files
+ * @files: files
  * @argv: arguments
- * Return: no return
+ * Return: no return.
  */
 void a_file(int filename, int files, char *argv[])
 {
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", files);
 		exit(100);
 	}
-
+	
 	return (0);
 }
 
