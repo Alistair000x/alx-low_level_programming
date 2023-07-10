@@ -3,6 +3,7 @@
 /**
  * a_file- checks if files can be opened
  * @filename: files
+ * @files: files
  * @argv: arguments
  * Return: no return
  */
